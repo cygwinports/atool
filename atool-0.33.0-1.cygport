@@ -1,0 +1,3 @@
+DESCRIPTION="Archive management scripts"
+HOMEPAGE="http://www.nongnu.org/atool/"
+SRC_URI="http://savannah.nongnu.org/download/${PN}/${P}.tar.gz"

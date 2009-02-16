@@ -1,0 +1,92 @@
+atool
+------------------------------------------
+atool is a script for managing file archives of various types (tar,
+tar+gzip, zip etc).
+
+The main command is aunpack which extracts files from an archive. If 
+there is only a single file in the archive, that file is moved to the 
+original directory. aunpack also prevents local files from being 
+overwritten by mistake.
+
+The other commands provided are apack (to create archives), als (to list
+files in archives), and acat (to extract files to standard out). As atool
+invokes external programs to handle the archives, not all commands may be
+supported for a certain type of archives.
+
+Runtime requirements:
+  bzip2
+  cpio
+  file
+  gzip
+  lha
+  lzop
+  nomarch
+  p7zip
+  perl
+  rpm
+  tar
+  unalz
+  unzip
+  zip
+
+Build requirements:
+(besides corresponding -devel packages)
+  cygwin-1.5.25-7
+  autoconf2.5-2.61-1
+  automake1.9-1.9.6-2
+  cygport-0.3.8-1
+  make-3.81-1
+
+Canonical website:
+  http://www.nongnu.org/atool/
+
+Canonical download:
+  http://savannah.nongnu.org/download/atool/
+
+-------------------------------------------
+
+Build instructions:
+  unpack atool-0.33.0-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./atool-0.33.0-X.cygport all
+
+This will create:
+  /usr/src/atool-0.33.0-X-src.tar.bz2
+  /usr/src/atool-0.33.0-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /usr/bin/acat
+  /usr/bin/adiff
+  /usr/bin/als
+  /usr/bin/apack
+  /usr/bin/arepack
+  /usr/bin/atool
+  /usr/bin/aunpack
+  /usr/share/doc/atool-0.33.0/COPYING
+  /usr/share/doc/atool-0.33.0/ChangeLog
+  /usr/share/doc/atool-0.33.0/NEWS
+  /usr/share/doc/atool-0.33.0/README
+  /usr/share/doc/atool-0.33.0/TODO
+  /usr/share/man/man1/acat.1.gz
+  /usr/share/man/man1/adiff.1.gz
+  /usr/share/man/man1/als.1.gz
+  /usr/share/man/man1/apack.1.gz
+  /usr/share/man/man1/arepack.1.gz
+  /usr/share/man/man1/atool.1.gz
+  /usr/share/man/man1/aunpack.1.gz
+
+------------------
+
+Port Notes:
+
+----- version 0.33.0-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://sourceware.org/cygwinports/
